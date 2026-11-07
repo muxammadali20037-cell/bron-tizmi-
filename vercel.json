@@ -1,11 +1,14 @@
 {
   "version": 2,
   "builds": [
-    { "src": "api/*.py", "use": "@vercel/python", "config": { "includeFiles": "src/**" } },
+    { "src": "api/webhook.py", "use": "@vercel/python", "config": { "includeFiles": "src/**" } },
+    { "src": "api/state.py", "use": "@vercel/python", "config": { "includeFiles": "src/**" } },
+    { "src": "api/done.py", "use": "@vercel/python", "config": { "includeFiles": "src/**" } },
+    { "src": "api/setup.py", "use": "@vercel/python", "config": { "includeFiles": "src/**" } },
     { "src": "public/**", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "handle": "filesystem" },
     { "src": "/", "dest": "/public/index.html" }
   ]
 }
