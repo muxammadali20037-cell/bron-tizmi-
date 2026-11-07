@@ -72,6 +72,7 @@ class handler(BaseHTTPRequestHandler):
         base = f"https://{self.headers.get('Host')}"
         webhook_url = f"{base}/api/webhook"
         try:
+            me = _tg(token, "getMe", {})
             set_res = _tg(
                 token,
                 "setWebhook",
@@ -90,6 +91,7 @@ class handler(BaseHTTPRequestHandler):
             200,
             {
                 "ok": bool(set_res.get("ok")) and supabase_ok,
+                "bot_username": me.get("result", {}).get("username"),
                 "webhook_registered": set_res.get("description", set_res),
                 "webhook_url": webhook_url,
                 "supabase_ok": supabase_ok,

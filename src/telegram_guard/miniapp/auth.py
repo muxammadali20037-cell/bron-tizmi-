@@ -61,10 +61,18 @@ def validate_init_data(
     if not provided_hash:
         raise InitDataError("initData ichida hash yo‘q.")
 
-    # Exclude `hash` (and the Ed25519 `signature`, if present) from the check string.
-    check_pairs = [(k, v) for k, v in pairs if k not in ("hash", "signature")]
-    expected = _expected_hash(bot_token, _data_check_string(check_pairs))
-    if not hmac.compare_digest(expected, provided_hash):
+    # Telegram computes `hash` over all fields except `hash`. It is ambiguous across
+    # client versions whether the newer Ed25519 `signature` field is part of that
+    # string, so accept the data either with or without `signature`. Both are valid
+    # HMACs over the same Telegram-signed data.
+    variants = (
+        [(k, v) for k, v in pairs if k != "hash"],
+        [(k, v) for k, v in pairs if k not in ("hash", "signature")],
+    )
+    if not any(
+        hmac.compare_digest(_expected_hash(bot_token, _data_check_string(cp)), provided_hash)
+        for cp in variants
+    ):
         raise InitDataError("initData imzosi noto‘g‘ri.")
 
     auth_date_raw = fields.get("auth_date", "")
