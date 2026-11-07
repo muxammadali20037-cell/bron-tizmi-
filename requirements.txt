@@ -1,0 +1,3 @@
+# Vercel Python functions use only the standard library plus the bundled
+# `telegram_guard` package (shipped via vercel.json includeFiles). No third-party
+# runtime dependencies are required.

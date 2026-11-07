@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Telegram Guard</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    :root {
+      --bg: var(--tg-theme-bg-color, #ffffff);
+      --text: var(--tg-theme-text-color, #1a1a1a);
+      --hint: var(--tg-theme-hint-color, #8a8a8a);
+      --card: var(--tg-theme-secondary-bg-color, #f2f2f5);
+      --accent: var(--tg-theme-button-color, #2ea6ff);
+      --accent-text: var(--tg-theme-button-text-color, #ffffff);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 16px;
+      font-family: -apple-system, system-ui, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.45;
+    }
+    h1 { font-size: 20px; margin: 0 0 4px; }
+    .sub { color: var(--hint); font-size: 14px; margin: 0 0 16px; }
+    .progress { font-size: 14px; color: var(--hint); margin-bottom: 12px; }
+    .item {
+      background: var(--card); border-radius: 14px; padding: 14px;
+      margin-bottom: 10px; display: flex; gap: 12px; align-items: flex-start;
+    }
+    .box {
+      width: 26px; height: 26px; flex: 0 0 26px; border-radius: 8px;
+      border: 2px solid var(--accent); display: flex; align-items: center;
+      justify-content: center; cursor: pointer; font-size: 16px; user-select: none;
+    }
+    .box.done { background: var(--accent); color: var(--accent-text); }
+    .item h3 { margin: 0 0 4px; font-size: 15px; }
+    .item p { margin: 0; font-size: 13px; color: var(--hint); }
+    .note {
+      margin-top: 16px; font-size: 12px; color: var(--hint);
+      border-top: 1px solid var(--card); padding-top: 12px;
+    }
+    #error { color: #e05a5a; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <h1>🛡 Telegram Guard</h1>
+  <p class="sub">Akkauntingizga kirmaydi — faqat Telegram’ning o‘z himoyasini yoqishga yordam beradi.</p>
+  <div class="progress" id="progress"></div>
+  <div id="list"></div>
+  <p class="note" id="note">
+    Diqqat: hech bir ishonchli xizmat login kodingiz yoki parolingizni so‘ramaydi.
+  </p>
+  <p id="error"></p>
+
+  <script>
+    (function () {
+      const tg = window.Telegram && window.Telegram.WebApp;
+      const errorEl = document.getElementById("error");
+      if (!tg || !tg.initData) {
+        errorEl.textContent = "Bu sahifani Telegram ilovasidagi tugma orqali oching.";
+        return;
+      }
+      tg.ready();
+      tg.expand();
+      const initData = tg.initData;
+
+      function api(path, extra) {
+        return fetch(path, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(Object.assign({ initData: initData }, extra || {})),
+        }).then(function (r) {
+          if (!r.ok) throw new Error("server " + r.status);
+          return r.json();
+        });
+      }
+
+      function render(state) {
+        document.getElementById("progress").textContent =
+          "Bajarildi: " + state.completed + "/" + state.total;
+        const list = document.getElementById("list");
+        list.innerHTML = "";
+        state.checklist.forEach(function (item) {
+          const row = document.createElement("div");
+          row.className = "item";
+          const box = document.createElement("div");
+          box.className = "box" + (item.done ? " done" : "");
+          box.textContent = item.done ? "✓" : "";
+          if (!item.done) {
+            box.addEventListener("click", function () {
+              api("/api/done", { id: item.id }).then(render).catch(showError);
+            });
+          }
+          const body = document.createElement("div");
+          const h = document.createElement("h3");
+          h.textContent = item.number + ". " + item.title;
+          const p = document.createElement("p");
+          p.textContent = item.how;
+          body.appendChild(h);
+          body.appendChild(p);
+          row.appendChild(box);
+          row.appendChild(body);
+          list.appendChild(row);
+        });
+      }
+
+      function showError(e) {
+        errorEl.textContent = "Xatolik: " + e.message;
+      }
+
+      api("/api/state").then(render).catch(showError);
+    })();
+  </script>
+</body>
+</html>

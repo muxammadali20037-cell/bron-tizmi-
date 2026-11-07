@@ -1,0 +1,62 @@
+[build-system]
+# >=84.1 fixes CVE-2026-59890 and GHSA-xmj3-9gf7-h52w; wheel support is built in since 70.1.
+requires = ["setuptools>=84.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "telegram-guard"
+version = "0.2.0"
+description = "Account-free Telegram security helper: a bot and mini app that harden your own account"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2.7,<3",
+    "pydantic-settings>=2.2,<3",
+    # <0.16 is incompatible with Click >=8.2 (`--help` crashes with make_metavar TypeError).
+    "typer>=0.16,<1",
+    "rich>=13.7,<15",
+]
+
+[project.optional-dependencies]
+dev = [
+    # >=9.0.3 fixes CVE-2025-71176 (predictable /tmp/pytest-of-{user} directory).
+    "pytest>=9.0.3,<10",
+    "ruff>=0.5,<1",
+    "pip-audit>=2.7,<3",
+]
+
+[project.scripts]
+telegram-guard = "telegram_guard.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"telegram_guard.miniapp" = ["static/*.html"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers --strict-config"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+# E/W/F: pycodestyle + pyflakes, I: imports, B: bugbear, UP: pyupgrade,
+# S: bandit security rules, A: builtin shadowing, SIM: simplify, RUF: ruff, BLE: blind except.
+select = ["E", "W", "F", "I", "B", "UP", "S", "A", "SIM", "RUF", "BLE"]
+# Uzbek Latin text uses the ‘ and ’ apostrophes (o‘, g‘) and en dash (–) intentionally.
+allowed-confusables = ["‘", "’", "–", "ℹ"]
+
+[tool.ruff.lint.isort]
+known-local-folder = ["conftest"]
+
+[tool.ruff.lint.per-file-ignores]
+# Tests use asserts, obviously-fake token constants, and urlopen against a local server.
+"tests/**" = ["S101", "S105", "S106", "S310"]
+# Serverless functions: `handler` must be lowercase (Vercel), imports follow a
+# runtime sys.path bootstrap (E402), and urlopen targets are fixed hosts (S310).
+"api/**" = ["S310"]
+"scripts/**" = ["S310"]
