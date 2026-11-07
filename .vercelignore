@@ -1,0 +1,7 @@
+# Dev-only files — not needed by the Vercel build. Excluding pyproject.toml also
+# stops Vercel's Python runtime from treating the repo as a single-entrypoint app.
+pyproject.toml
+tests/
+*.md
+.ruff_cache/
+.pytest_cache/
