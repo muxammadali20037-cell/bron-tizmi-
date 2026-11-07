@@ -1,7 +1,9 @@
-# Dev-only files — not needed by the Vercel build. Excluding pyproject.toml also
-# stops Vercel's Python runtime from treating the repo as a single-entrypoint app.
+# Dev-only files, and files with a stray top-level `app`/`handler` that would
+# confuse Vercel's Python entrypoint detection. The serverless functions
+# (api/*.py) import only the package modules they need, not these.
 pyproject.toml
 tests/
 *.md
 .ruff_cache/
 .pytest_cache/
+src/telegram_guard/cli.py
