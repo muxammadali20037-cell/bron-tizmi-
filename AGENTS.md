@@ -8,10 +8,13 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 <!-- END:nextjs-agent-rules -->
 
-## OneTable loyiha qoidalari
+## SOFRIVA loyiha qoidalari
 
 - Foydalanuvchiga hisobotlar sodda o‘zbek tilida yoziladi; kod va identifikatorlar inglizcha.
-- Har bir yangi UI matni `src/messages/{uz,ru,en}.json` ga uchala tilda qo‘shiladi.
+- Har bir yangi UI matni `src/messages/{uz,ru,en}.json` ga uchala tilda qo‘shiladi. Istisno: ichki `/design` sahifasining izohlari (faqat o‘zbekcha).
+- Brend nomi, slogan va ranglar faqat `src/config/brand.ts` va `globals.css` tokenlari orqali; HEX kodni komponentga yozmang.
+- Playfair Display (`font-display`) faqat 24 px va undan katta sarlavhalarda.
+- Soxta ma’lumot yo‘q: KPI va ro‘yxatlar faqat bazadan; ma’lumot bo‘lmasa bo‘sh holat ko‘rsatiladi.
 - Bazaga murojaat faqat serverda; RLS har doim yoqiq; `service_role`/secret kalit brauzerga chiqmaydi.
 - Sxema o‘zgarishi faqat `supabase/migrations/` orqali; qo‘lda dashboard'da o‘zgartirilmaydi.
 - Bron himoyasi bazada (exclusion constraint) — frontend tekshiruvi yetarli emas.

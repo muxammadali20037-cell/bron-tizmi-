@@ -37,3 +37,11 @@ export function isSupabaseConfigured(): boolean {
     process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY,
   );
 }
+
+/**
+ * Ichki /design sahifasi (komponentlar namunasi). Lokal ishlab chiqishda doim ochiq,
+ * serverda faqat ENABLE_DESIGN_PAGE=true bo‘lsa. Haqiqiy ishga tushirishdan oldin o‘chiriladi.
+ */
+export function isDesignPageEnabled(): boolean {
+  return process.env.NODE_ENV !== "production" || process.env.ENABLE_DESIGN_PAGE === "true";
+}

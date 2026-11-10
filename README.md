@@ -1,16 +1,17 @@
-# OneTable
+# SOFRIVA
 
-Restoranlar va mijozlarni bitta platformada birlashtiruvchi bron va restoran boshqaruv tizimi.
-Birinchi bozor — O‘zbekiston (Toshkent).
+Restoranlarni topish, zal va stol tanlab real vaqtda bron qilish hamda restoranni boshqarish uchun
+hospitality texnologiya platformasi. Birinchi bozor — O‘zbekiston (Toshkent).
 
-> **Holat:** Sprint 0 — loyiha poydevori. Mahsulot hali ishga tushmagan.
+> **Holat:** Sprint 1 — brend va design system. Mahsulot hali ishga tushmagan.
+> SOFRIVA — ishchi nom, huquqiy tekshiruv davom etmoqda (ADR 0003).
 
 ## Texnologiyalar
 
 | Qatlam       | Texnologiya                                                               |
 | ------------ | ------------------------------------------------------------------------- |
 | Frontend     | Next.js 16 (App Router, Cache Components), React 19, TypeScript strict    |
-| UI           | Tailwind CSS 4, shadcn/ui konvensiyasi, Lucide ikonkalar, Inter shrifti   |
+| UI           | Tailwind CSS 4, Radix UI, Lucide, Inter + Playfair Display (ADR 0004)     |
 | Baza va auth | Supabase (PostgreSQL 17, RLS, Auth, Realtime, Storage), Frankfurt regioni |
 | Tarjima      | Next.js o‘rnatilgan i18n: `/uz`, `/ru`, `/en`                             |
 | Test         | Vitest (unit), Playwright (E2E, Sprint 4+), pgTAP (RLS, Sprint 2+)        |
@@ -40,14 +41,20 @@ npm run dev                  # http://localhost:3000
 | `npm run format`    | Prettier bilan formatlash                         |
 | `npm run db:types`  | Supabase sxemasidan TypeScript turlarini yaratish |
 
+Ichki komponentlar namunasi: `/uz/design` (lokal `npm run dev` da doim ochiq; serverda faqat
+`ENABLE_DESIGN_PAGE=true` bo‘lsa).
+
 ## Papkalar
 
 ```text
 src/
   app/[locale]/        # sahifalar; til URL'da (/uz, /ru, /en)
   app/api/             # health, webhooklar
-  components/ui/       # design system komponentlari (Sprint 1)
-  components/shared/   # umumiy komponentlar (logo, til tanlash)
+  components/ui/       # design system: Button, Field, Input, PhoneInput, Dialog, Tabs, ...
+  components/booking/  # bron elementlari: SlotGrid, PartySizeStepper
+  components/layout/   # sayt va dashboard qobiqlari
+  components/shared/   # logo, til tanlash
+  config/brand.ts      # brend nomi, slogan, ranglar (bitta joyda)
   features/            # modullar: auth, restaurants, reservations, ... (Sprint 2+)
   lib/                 # i18n, supabase klientlari, env, yordamchilar
   messages/            # tarjimalar: uz.json, ru.json, en.json

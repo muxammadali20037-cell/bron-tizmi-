@@ -1,40 +1,56 @@
 @import "tailwindcss";
 
 /*
- * OneTable design tokenlari (spetsifikatsiya 13-qism).
- * Gold faqat kichik premium aksentlar uchun. Asosiy CTA — Deep Navy.
- * To‘liq design system Sprint 1'da shu tokenlar ustiga quriladi.
+ * SOFRIVA design tokenlari (ADR 0004).
+ * Qoidalar:
+ *  - Ilova foni Warm Ivory, kartalar oq, asosiy matn Charcoal.
+ *  - Asosiy tugma va brend rangi Deep Forest.
+ *  - Muted Gold faqat aksent (chiziq, nuqta, belgi) yoki Deep Forest ustidagi matn.
+ *    Och fonda matn sifatida ishlatilmaydi: Ivory ustida kontrasti 1.92:1.
+ *  - Holat hech qachon faqat rang bilan berilmaydi: rang + belgi + so‘z birga.
+ * Kontrast qiymatlari ADR 0004'da hisoblab yozilgan.
  */
 :root {
   /* Brend palitrasi */
-  --brand-navy: #101b2d;
-  --brand-ivory: #f8f7f3;
+  --brand-forest: #0f3d34;
+  --brand-gold: #d4af7c;
+  --brand-ivory: #f8f7f4;
+  --brand-charcoal: #1f2937;
+  --brand-sage: #587b70;
+  --brand-sage-text: #4a6a60;
   --brand-white: #ffffff;
-  --brand-charcoal: #252b35;
-  --brand-muted-gray: #858b95;
-  --brand-gold: #c6a46a;
-  --brand-success: #23865b;
-  --brand-danger: #d94a4a;
+  --brand-danger: #b3403f;
 
   /* Semantik tokenlar */
   --background: var(--brand-ivory);
   --foreground: var(--brand-charcoal);
   --card: var(--brand-white);
   --card-foreground: var(--brand-charcoal);
-  --primary: var(--brand-navy);
+  --popover: var(--brand-white);
+  --popover-foreground: var(--brand-charcoal);
+  --primary: var(--brand-forest);
   --primary-foreground: var(--brand-white);
-  --secondary: #efede7;
-  --secondary-foreground: var(--brand-navy);
-  --muted: #efede7;
-  /* #858B95 oq/ivory fonda matn uchun kontrasti yetarli emas, shuning uchun matnga to‘qroq tus */
-  --muted-foreground: #5c6370;
+  --secondary: #e8efec;
+  --secondary-foreground: var(--brand-forest); /* 10.35:1 */
+  --muted: #efeee9;
+  --muted-foreground: #5c6370; /* Ivory'da 5.64:1, muted'da 5.2:1 */
   --accent: var(--brand-gold);
-  --accent-foreground: var(--brand-navy);
-  --success: var(--brand-success);
+  --accent-foreground: var(--brand-forest); /* 5.88:1 */
+  --success: var(--brand-sage);
+  --success-foreground: var(--brand-white); /* 4.69:1 */
+  --success-soft: #e3ece8;
+  --success-soft-foreground: #3f5c53; /* 6.08:1 */
+  --warning-soft: #f6ead6;
+  --warning-soft-foreground: var(--brand-charcoal); /* 12.34:1 */
+  --neutral-soft: var(--muted);
+  --neutral-soft-foreground: #4b515c; /* 6.87:1 */
   --destructive: var(--brand-danger);
-  --border: #e4e2dc;
-  --input: #d9d6ce;
-  --ring: var(--brand-navy);
+  --destructive-foreground: var(--brand-white); /* 5.64:1 */
+  --destructive-soft: #f7e4e2;
+  --destructive-soft-foreground: #8f2f2e; /* 6.56:1 */
+  --border: #e2dfd6; /* bezak chiziqlari */
+  --input: #878276; /* forma chegarasi: oqda 3.83:1, Ivory'da 3.57:1 (WCAG 1.4.11) */
+  --ring: var(--brand-forest);
   --radius: 0.75rem;
 }
 
@@ -43,6 +59,8 @@
   --color-foreground: var(--foreground);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
@@ -52,19 +70,67 @@
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
   --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-success-soft: var(--success-soft);
+  --color-success-soft-foreground: var(--success-soft-foreground);
+  --color-warning-soft: var(--warning-soft);
+  --color-warning-soft-foreground: var(--warning-soft-foreground);
+  --color-neutral-soft: var(--neutral-soft);
+  --color-neutral-soft-foreground: var(--neutral-soft-foreground);
   --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-destructive-soft: var(--destructive-soft);
+  --color-destructive-soft-foreground: var(--destructive-soft-foreground);
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-navy: var(--brand-navy);
+
+  --color-forest: var(--brand-forest);
   --color-gold: var(--brand-gold);
+  --color-ivory: var(--brand-ivory);
+  --color-charcoal: var(--brand-charcoal);
+  --color-sage: var(--brand-sage);
+  --color-sage-text: var(--brand-sage-text);
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
 
   --font-sans: "Inter Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  /* Faqat 24 px dan katta brend sarlavhalari uchun */
+  --font-display: "Playfair Display Variable", ui-serif, Georgia, "Times New Roman", serif;
+
+  --shadow-card: 0 1px 2px rgb(15 61 52 / 0.04), 0 4px 16px rgb(15 61 52 / 0.06);
+  --shadow-overlay: 0 12px 40px rgb(31 41 55 / 0.18);
+
+  --animate-fade-in: fade-in 150ms ease-out;
+  --animate-scale-in: scale-in 160ms ease-out;
+  --animate-slide-up: slide-up 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  --animate-slide-in-right: slide-in-right 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+  }
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.97);
+    }
+  }
+  @keyframes slide-up {
+    from {
+      transform: translateY(100%);
+    }
+  }
+  @keyframes slide-in-right {
+    from {
+      transform: translateX(100%);
+    }
+  }
 }
 
 @layer base {
@@ -86,5 +152,15 @@
   :focus-visible {
     outline: 2px solid var(--ring);
     outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }

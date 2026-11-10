@@ -17,6 +17,6 @@ orqali til yo‘naltirish.
 
 ## Natija
 
-- Til tanlash tartibi: URL → saqlangan cookie (`onetable_locale`) → brauzer tili → o‘zbekcha.
+- Til tanlash tartibi: URL → saqlangan cookie (`sofriva_locale`; ADR 0003 gacha `onetable_locale` edi) → brauzer tili → o‘zbekcha.
 - Cookie faqat haqiqiy sahifa ochilishida yoki til tugmasi bosilganda yoziladi (prefetch yozmaydi).
 - Uch lug‘atning kalitlari bir xilligini TypeScript va unit test tekshiradi.

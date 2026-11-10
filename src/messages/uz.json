@@ -1,24 +1,23 @@
 {
   "meta": {
-    "title": "OneTable — restoran toping va stol bron qiling",
-    "description": "Toshkentdagi restoranlarni toping, bo‘sh stollarni real vaqtda ko‘ring va bir necha soniyada bron qiling."
-  },
-  "brand": {
-    "slogan": "One platform. Every restaurant. Every reservation."
+    "title": "{brand} — restoranlar uchun bron tizimi",
+    "description": "Restoranlar uchun bronlar, stollar va xodimlarni boshqarish tizimi hamda mehmonlar uchun restoranning o‘z bron sahifasi. Pilot Toshkentda."
   },
   "nav": {
-    "language": "Til"
+    "language": "Til",
+    "main": "Asosiy menyu",
+    "skipToContent": "Asosiy qismga o‘tish"
   },
   "home": {
     "status": "Tez orada · pilot Toshkentda",
-    "title": "Restoran tanlashdan stol bron qilishgacha — bitta platformada",
-    "subtitle": "OneTable mijozlar uchun qulay bronni va restoranlar uchun bronlar, stollar va xodimlarni boshqarish tizimini birlashtiradi.",
+    "title": "Stol bron qilish — mehmon uchun oson, restoran uchun tartibli",
+    "subtitle": "{brand} restoranlarga bronlar, stollar va xodimlarni bitta tizimda boshqarishga yordam beradi. Mehmonlar esa restoranning o‘z bron sahifasi orqali bir necha qadamda stol band qiladi.",
     "customers": {
-      "title": "Mijozlar uchun",
+      "title": "Mehmonlar uchun",
       "items": [
-        "Restoranlarni joylashuv, oshxona va narx bo‘yicha qidirish",
-        "Bo‘sh vaqt va stollarni real vaqtda ko‘rish",
-        "Bronlar tarixi va eslatmalar bir joyda"
+        "Restoranning bron sahifasida bo‘sh vaqtlarni ko‘rish",
+        "Telefon raqam bilan tez bron qilish",
+        "Bronlaringiz holati bir joyda"
       ]
     },
     "restaurants": {
@@ -32,9 +31,72 @@
   },
   "notFound": {
     "title": "Sahifa topilmadi",
+    "description": "Havola eskirgan yoki manzilda xato bo‘lishi mumkin.",
     "back": "Bosh sahifaga qaytish"
   },
   "footer": {
-    "copyright": "© 2026 OneTable"
+    "copyright": "© 2026 {brand}"
+  },
+  "common": {
+    "close": "Yopish",
+    "cancel": "Bekor qilish",
+    "confirm": "Tasdiqlash",
+    "retry": "Qayta urinish",
+    "loading": "Yuklanmoqda…",
+    "back": "Orqaga",
+    "optional": "ixtiyoriy",
+    "save": "Saqlash"
+  },
+  "phone": {
+    "label": "Telefon raqami",
+    "hint": "Masalan: 90 123 45 67",
+    "countryCode": "Mamlakat kodi: +998",
+    "errors": {
+      "required": "Telefon raqamini kiriting",
+      "invalid": "Raqam 9 ta raqamdan iborat bo‘lishi kerak, masalan 90 123 45 67"
+    }
+  },
+  "party": {
+    "label": "Mehmonlar soni",
+    "decrease": "Bir kishi kamaytirish",
+    "increase": "Bir kishi qo‘shish",
+    "guests": {
+      "one": "{count} kishi",
+      "few": "{count} kishi",
+      "many": "{count} kishi",
+      "other": "{count} kishi"
+    },
+    "max": "{count} kishidan ko‘p bo‘lsa, restoranga qo‘ng‘iroq qiling"
+  },
+  "slots": {
+    "label": "Vaqtni tanlang",
+    "day": "Kunduzi",
+    "evening": "Kechqurun",
+    "unavailable": "band",
+    "empty": "Bu kunga bo‘sh vaqt qolmadi. Boshqa kunni tanlab ko‘ring."
+  },
+  "reservationStatus": {
+    "pending": "Tasdiq kutilmoqda",
+    "awaiting_payment": "To‘lov kutilmoqda",
+    "confirmed": "Tasdiqlangan",
+    "checked_in": "Mehmon keldi",
+    "completed": "Yakunlangan",
+    "cancelled": "Bekor qilingan",
+    "rejected": "Rad etilgan",
+    "expired": "Muddati o‘tgan",
+    "no_show": "Kelmadi"
+  },
+  "tableStatus": {
+    "available": "Bo‘sh",
+    "reserved": "Bron qilingan",
+    "occupied": "Band",
+    "blocked": "Vaqtincha yopilgan",
+    "unavailable": "Mavjud emas"
+  },
+  "states": {
+    "errorTitle": "Nimadir xato ketdi",
+    "errorDescription": "Sahifani qayta yuklab ko‘ring. Muammo takrorlansa, birozdan keyin urinib ko‘ring.",
+    "emptyTitle": "Hozircha hech narsa yo‘q",
+    "offline": "Internet aloqasi yo‘q. Ulanish tiklangach qayta urinib ko‘ring."
   }
 }

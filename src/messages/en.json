@@ -1,40 +1,102 @@
 {
   "meta": {
-    "title": "OneTable — find a restaurant and book a table",
-    "description": "Discover restaurants in Tashkent, see free tables in real time and book in seconds."
-  },
-  "brand": {
-    "slogan": "One platform. Every restaurant. Every reservation."
+    "title": "{brand} — reservation system for restaurants",
+    "description": "A system for restaurants to manage reservations, tables and staff, plus each restaurant’s own booking page for guests. Pilot in Tashkent."
   },
   "nav": {
-    "language": "Language"
+    "language": "Language",
+    "main": "Main menu",
+    "skipToContent": "Skip to main content"
   },
   "home": {
     "status": "Coming soon · pilot in Tashkent",
-    "title": "From choosing a restaurant to booking a table — on one platform",
-    "subtitle": "OneTable brings together easy booking for guests and a system for restaurants to manage reservations, tables and staff.",
+    "title": "Table booking that is simple for guests and orderly for restaurants",
+    "subtitle": "{brand} helps restaurants manage reservations, tables and staff in one system. Guests book a table in a few steps on the restaurant’s own booking page.",
     "customers": {
       "title": "For guests",
       "items": [
-        "Search restaurants by area, cuisine and price",
-        "See free times and tables in real time",
-        "Booking history and reminders in one place"
+        "See open times on the restaurant’s booking page",
+        "Book quickly with your phone number",
+        "The status of all your bookings in one place"
       ]
     },
     "restaurants": {
       "title": "For restaurants",
       "items": [
-        "Every reservation in one daily timeline",
-        "Manage dining areas and tables",
+        "All reservations in one daily schedule",
+        "Manage areas and tables",
         "Separate roles and permissions for staff"
       ]
     }
   },
   "notFound": {
     "title": "Page not found",
+    "description": "The link may be outdated or the address may contain a typo.",
     "back": "Back to home"
   },
   "footer": {
-    "copyright": "© 2026 OneTable"
+    "copyright": "© 2026 {brand}"
+  },
+  "common": {
+    "close": "Close",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "retry": "Try again",
+    "loading": "Loading…",
+    "back": "Back",
+    "optional": "optional",
+    "save": "Save"
+  },
+  "phone": {
+    "label": "Phone number",
+    "hint": "For example: 90 123 45 67",
+    "countryCode": "Country code: +998",
+    "errors": {
+      "required": "Enter your phone number",
+      "invalid": "The number must have 9 digits, for example 90 123 45 67"
+    }
+  },
+  "party": {
+    "label": "Number of guests",
+    "decrease": "Remove one guest",
+    "increase": "Add one guest",
+    "guests": {
+      "one": "{count} guest",
+      "few": "{count} guests",
+      "many": "{count} guests",
+      "other": "{count} guests"
+    },
+    "max": "For more than {count} guests, please call the restaurant"
+  },
+  "slots": {
+    "label": "Choose a time",
+    "day": "Daytime",
+    "evening": "Evening",
+    "unavailable": "unavailable",
+    "empty": "No open times left for this day. Try another day."
+  },
+  "reservationStatus": {
+    "pending": "Awaiting confirmation",
+    "awaiting_payment": "Awaiting payment",
+    "confirmed": "Confirmed",
+    "checked_in": "Seated",
+    "completed": "Completed",
+    "cancelled": "Cancelled",
+    "rejected": "Declined",
+    "expired": "Expired",
+    "no_show": "No-show"
+  },
+  "tableStatus": {
+    "available": "Available",
+    "reserved": "Reserved",
+    "occupied": "Occupied",
+    "blocked": "Temporarily blocked",
+    "unavailable": "Unavailable"
+  },
+  "states": {
+    "errorTitle": "Something went wrong",
+    "errorDescription": "Try reloading the page. If the problem continues, try again a little later.",
+    "emptyTitle": "Nothing here yet",
+    "offline": "No internet connection. Try again once you are back online."
   }
 }

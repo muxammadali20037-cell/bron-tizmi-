@@ -44,3 +44,16 @@ describe("tarjima fayllari", () => {
     expect(collectEmpty(dict)).toEqual([]);
   });
 });
+
+describe("xato sahifasi matnlari (boundary.json)", () => {
+  it("uchala tilda bir xil kalitlar va bo‘sh matn yo‘q", async () => {
+    const boundary = (await import("./boundary.json")).default;
+    const base = collectPaths(boundary.uz).sort();
+    for (const locale of ["ru", "en"] as const) {
+      expect(collectPaths(boundary[locale]).sort()).toEqual(base);
+    }
+    for (const locale of ["uz", "ru", "en"] as const) {
+      expect(collectEmpty(boundary[locale])).toEqual([]);
+    }
+  });
+});

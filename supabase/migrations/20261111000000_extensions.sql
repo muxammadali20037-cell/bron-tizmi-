@@ -1,4 +1,4 @@
--- OneTable: asosiy PostgreSQL kengaytmalari.
+-- SOFRIVA: asosiy PostgreSQL kengaytmalari.
 -- Supabase tavsiyasiga ko'ra kengaytmalar `extensions` sxemasiga o'rnatiladi.
 
 -- Bir stolga ustma-ust bronni taqiqlovchi exclusion constraint uchun (uuid = va tstzrange && bitta indeksda)

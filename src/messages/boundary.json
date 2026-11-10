@@ -1,0 +1,20 @@
+{
+  "uz": {
+    "title": "Nimadir xato ketdi",
+    "description": "Sahifani qayta yuklab ko‘ring. Muammo takrorlansa, birozdan keyin urinib ko‘ring.",
+    "retry": "Qayta urinish",
+    "home": "Bosh sahifaga qaytish"
+  },
+  "ru": {
+    "title": "Что-то пошло не так",
+    "description": "Попробуйте обновить страницу. Если проблема повторится, попробуйте немного позже.",
+    "retry": "Повторить",
+    "home": "Вернуться на главную"
+  },
+  "en": {
+    "title": "Something went wrong",
+    "description": "Try reloading the page. If the problem continues, try again a little later.",
+    "retry": "Try again",
+    "home": "Back to home"
+  }
+}

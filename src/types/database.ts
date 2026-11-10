@@ -1,7 +1,7 @@
 /**
  * Supabase sxemasidan avtomatik yaratiladigan turlar.
  * Qo‘lda tahrirlanmaydi: `npm run db:types` bilan qayta yaratiladi.
- * Hozircha bazada OneTable jadvallari yo‘q (Sprint 2'da qo‘shiladi).
+ * Hozircha bazada SOFRIVA jadvallari yo‘q (Sprint 2'da qo‘shiladi).
  */
 export type Json = string | number | boolean | null | { [key: string]: Json | undefined } | Json[];
 
