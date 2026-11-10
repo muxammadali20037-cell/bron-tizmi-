@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "title": "OneTable — find a restaurant and book a table",
+    "description": "Discover restaurants in Tashkent, see free tables in real time and book in seconds."
+  },
+  "brand": {
+    "slogan": "One platform. Every restaurant. Every reservation."
+  },
+  "nav": {
+    "language": "Language"
+  },
+  "home": {
+    "status": "Coming soon · pilot in Tashkent",
+    "title": "From choosing a restaurant to booking a table — on one platform",
+    "subtitle": "OneTable brings together easy booking for guests and a system for restaurants to manage reservations, tables and staff.",
+    "customers": {
+      "title": "For guests",
+      "items": [
+        "Search restaurants by area, cuisine and price",
+        "See free times and tables in real time",
+        "Booking history and reminders in one place"
+      ]
+    },
+    "restaurants": {
+      "title": "For restaurants",
+      "items": [
+        "Every reservation in one daily timeline",
+        "Manage dining areas and tables",
+        "Separate roles and permissions for staff"
+      ]
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "back": "Back to home"
+  },
+  "footer": {
+    "copyright": "© 2026 OneTable"
+  }
+}

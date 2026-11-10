@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "title": "OneTable — restoran toping va stol bron qiling",
+    "description": "Toshkentdagi restoranlarni toping, bo‘sh stollarni real vaqtda ko‘ring va bir necha soniyada bron qiling."
+  },
+  "brand": {
+    "slogan": "One platform. Every restaurant. Every reservation."
+  },
+  "nav": {
+    "language": "Til"
+  },
+  "home": {
+    "status": "Tez orada · pilot Toshkentda",
+    "title": "Restoran tanlashdan stol bron qilishgacha — bitta platformada",
+    "subtitle": "OneTable mijozlar uchun qulay bronni va restoranlar uchun bronlar, stollar va xodimlarni boshqarish tizimini birlashtiradi.",
+    "customers": {
+      "title": "Mijozlar uchun",
+      "items": [
+        "Restoranlarni joylashuv, oshxona va narx bo‘yicha qidirish",
+        "Bo‘sh vaqt va stollarni real vaqtda ko‘rish",
+        "Bronlar tarixi va eslatmalar bir joyda"
+      ]
+    },
+    "restaurants": {
+      "title": "Restoranlar uchun",
+      "items": [
+        "Barcha bronlar bitta kunlik jadvalda",
+        "Zonalar va stollarni boshqarish",
+        "Xodimlar uchun alohida rollar va ruxsatlar"
+      ]
+    }
+  },
+  "notFound": {
+    "title": "Sahifa topilmadi",
+    "back": "Bosh sahifaga qaytish"
+  },
+  "footer": {
+    "copyright": "© 2026 OneTable"
+  }
+}

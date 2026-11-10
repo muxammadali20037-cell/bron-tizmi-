@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+/*
+ * OneTable design tokenlari (spetsifikatsiya 13-qism).
+ * Gold faqat kichik premium aksentlar uchun. Asosiy CTA — Deep Navy.
+ * To‘liq design system Sprint 1'da shu tokenlar ustiga quriladi.
+ */
+:root {
+  /* Brend palitrasi */
+  --brand-navy: #101b2d;
+  --brand-ivory: #f8f7f3;
+  --brand-white: #ffffff;
+  --brand-charcoal: #252b35;
+  --brand-muted-gray: #858b95;
+  --brand-gold: #c6a46a;
+  --brand-success: #23865b;
+  --brand-danger: #d94a4a;
+
+  /* Semantik tokenlar */
+  --background: var(--brand-ivory);
+  --foreground: var(--brand-charcoal);
+  --card: var(--brand-white);
+  --card-foreground: var(--brand-charcoal);
+  --primary: var(--brand-navy);
+  --primary-foreground: var(--brand-white);
+  --secondary: #efede7;
+  --secondary-foreground: var(--brand-navy);
+  --muted: #efede7;
+  /* #858B95 oq/ivory fonda matn uchun kontrasti yetarli emas, shuning uchun matnga to‘qroq tus */
+  --muted-foreground: #5c6370;
+  --accent: var(--brand-gold);
+  --accent-foreground: var(--brand-navy);
+  --success: var(--brand-success);
+  --destructive: var(--brand-danger);
+  --border: #e4e2dc;
+  --input: #d9d6ce;
+  --ring: var(--brand-navy);
+  --radius: 0.75rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-success: var(--success);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-navy: var(--brand-navy);
+  --color-gold: var(--brand-gold);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "cv11", "ss01";
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+}
