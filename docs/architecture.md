@@ -18,19 +18,20 @@ Har bir band stol oralig‘i (bron yoki vaqtincha yopish) `table_allocations` ja
 Constraint bitta stol uchun kesishgan ikki faol oraliqni qabul qilmaydi:
 
 ```sql
-alter table table_allocations
-  add constraint no_double_booking
-  exclude using gist (table_id with =, period with &&)
-  where (active);
+constraint table_allocations_no_overlap
+  exclude using gist (table_id with =, period with &&) where (active)
 ```
 
-Bron faqat `create_reservation()` funksiyasi orqali yaratiladi (bitta tranzaksiya).
+Mijoz ilovasi bron jadvallariga to‘g‘ridan-to‘g‘ri yoza olmaydi (faqat o‘qiydi). Bron Sprint 7'da
+`create_reservation()` server funksiyasi orqali bitta tranzaksiyada yaratiladi.
+Baza tuzilishi va RLS qoidalari: ADR 0006.
 
 ## Bron holatlari
 
 `pending` | `awaiting_payment` (V1) | `confirmed` | `checked_in` — stolni band qiladi.
 `expired` | `rejected` | `cancelled` | `no_show` | `completed` — yakuniy, stolni bo‘shatadi.
-Ruxsat etilgan o‘tishlar: `src/lib/booking/statuses.ts` (Sprint 7'da bazadagi trigger bilan bir xil).
+Ruxsat etilgan o‘tishlar: `src/lib/booking/statuses.ts` va bazadagi `private.can_transition`
+(trigger). Ikkalasi bir xil ekanini Vitest va pgTAP testlari tekshiradi.
 
 ## Stol holatlari (tanlangan vaqt uchun)
 

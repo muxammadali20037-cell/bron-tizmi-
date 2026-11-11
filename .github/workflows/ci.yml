@@ -40,3 +40,21 @@ jobs:
         run: npm run build
         env:
           NEXT_TELEMETRY_DISABLED: "1"
+
+  db:
+    name: Baza testlari (pgTAP)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: supabase/setup-cli@v1
+        with:
+          version: latest
+
+      # Lokal Supabase barcha migratsiyalarni noldan qo'llaydi — migratsiyalar ham shu yerda tekshiriladi
+      - name: Supabase'ni ishga tushirish
+        run: supabase start
+
+      - name: pgTAP testlari
+        run: supabase test db

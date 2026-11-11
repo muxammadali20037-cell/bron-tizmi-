@@ -7,8 +7,13 @@ import {
   nextStatuses,
   reservationStatuses,
 } from "./statuses";
+import { Constants } from "@/types/database";
 
 describe("bron holatlari", () => {
+  it("bazadagi reservation_status enum bilan bir xil", () => {
+    expect([...reservationStatuses]).toEqual([...Constants.public.Enums.reservation_status]);
+  });
+
   it("stolni band qiluvchi holatlar", () => {
     expect([...blockingStatuses]).toEqual([
       "pending",

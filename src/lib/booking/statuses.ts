@@ -1,7 +1,8 @@
 /**
- * Bron va stol holatlari. Bu ro‘yxatlar Sprint 4'dagi bazadagi enum va trigger bilan bir xil
- * bo‘lishi shart: baza o‘tishlarni o‘zi ham tekshiradi, bu yerdagi funksiya faqat interfeysda
- * ruxsat etilmagan tugmalarni ko‘rsatmaslik uchun.
+ * Bron va stol holatlari. Bu ro‘yxatlar bazadagi `reservation_status` enum va
+ * `private.can_transition` / `private.is_blocking_status` funksiyalari bilan bir xil bo‘lishi
+ * shart (supabase/migrations/…_reservations.sql). Baza o‘tishlarni o‘zi ham tekshiradi, bu
+ * yerdagi funksiya faqat interfeysda ruxsat etilmagan tugmalarni ko‘rsatmaslik uchun.
  */
 
 export const reservationStatuses = [

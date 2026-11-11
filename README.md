@@ -3,7 +3,8 @@
 Restoranlarni topish, zal va stol tanlab real vaqtda bron qilish hamda restoranni boshqarish uchun
 hospitality texnologiya platformasi. Birinchi bozor — O‘zbekiston (Toshkent).
 
-> **Holat:** Sprint 1 — brend va design system. Mahsulot hali ishga tushmagan.
+> **Holat:** Sprint 2 — baza poydevori va RLS (staging). Login va interfeys hali ulanmagan;
+> mahsulot hali ishga tushmagan.
 > SOFRIVA — ishchi nom, huquqiy tekshiruv davom etmoqda (ADR 0003).
 
 ## Texnologiyalar
@@ -40,6 +41,8 @@ npm run dev                  # http://localhost:3000
 | `npm run check`     | lint + typecheck + test birga                     |
 | `npm run format`    | Prettier bilan formatlash                         |
 | `npm run db:types`  | Supabase sxemasidan TypeScript turlarini yaratish |
+
+Baza testlari (pgTAP) qanday ishga tushiriladi: [supabase/tests/README.md](supabase/tests/README.md).
 
 Ichki komponentlar namunasi: `/uz/design` (lokal `npm run dev` da doim ochiq; serverda faqat
 `ENABLE_DESIGN_PAGE=true` bo‘lsa).
