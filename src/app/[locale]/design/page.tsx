@@ -28,7 +28,6 @@ import {
 import { Alert, EmptyState, LoadingRegion, Skeleton, Spinner } from "@/components/ui/feedback";
 import { ReservationStatusChip, TableStatusChip } from "@/components/ui/status-chip";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { logoVariants } from "@/config/brand";
 import { generateSlotStarts } from "@/lib/booking/slots";
 import { reservationStatuses, tableStatuses } from "@/lib/booking/statuses";
 import { isDesignPageEnabled } from "@/lib/env";
@@ -92,12 +91,6 @@ const swatches = [
     className: "bg-destructive",
   },
 ] as const;
-
-const logoNames = {
-  ring: "A · Halqa",
-  dots: "B · Ikki o‘rin",
-  sofra: "C · Sofra",
-} as const;
 
 /** Namuna slotlar: 12:00–23:00, har 30 daqiqa; uchtasi "band" ko‘rinishi uchun. */
 const sampleSlots = generateSlotStarts({
@@ -163,32 +156,30 @@ export default async function DesignPage() {
 
         <Section
           id="logo"
-          title="Logotip: 3 variant"
-          description="Hammasi noldan chizilgan S monogramma. Bittasini tanlang — qolgan ikkitasi o‘chiriladi."
+          title="Logotip"
+          description="Egasi buyurtma qilib chizdirgan S monogramma. Och fonda Deep Forest, to‘q fonda oltin rangda ishlatiladi."
         >
-          <div className="grid gap-4 md:grid-cols-3">
-            {logoVariants.map((variant) => (
-              <Card key={variant} className="overflow-hidden">
-                <div className="bg-ivory flex h-36 items-center justify-center border-b">
-                  <Logo
-                    variant={variant}
-                    className="[&_svg]:size-12 [&>span:last-child]:text-2xl"
-                  />
-                </div>
-                <div className="bg-forest flex h-24 items-center justify-center gap-6">
-                  <Logo variant={variant} tone="dark" />
-                </div>
-                <CardContent className="flex items-center justify-between gap-3">
-                  <p className="font-semibold">{logoNames[variant]}</p>
-                  <div className="flex items-end gap-3" aria-hidden="true">
-                    <span className="bg-forest flex size-10 items-center justify-center rounded-[10px]">
-                      <LogoMark variant={variant} tone="dark" className="size-7" />
-                    </span>
-                    <LogoMark variant={variant} className="size-5" />
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid gap-4 md:grid-cols-2">
+            <Card className="overflow-hidden">
+              <div className="bg-ivory flex h-48 items-center justify-center">
+                <Logo className="[&_svg]:size-16 [&>span:last-child]:text-3xl" />
+              </div>
+            </Card>
+            <Card className="overflow-hidden">
+              <div className="bg-forest flex h-48 items-center justify-center">
+                <Logo tone="dark" className="[&_svg]:size-16 [&>span:last-child]:text-3xl" />
+              </div>
+            </Card>
+          </div>
+          <div className="mt-4 flex flex-wrap items-end gap-6" aria-hidden="true">
+            <span className="bg-forest flex size-16 items-center justify-center rounded-2xl">
+              <LogoMark tone="dark" className="size-12" />
+            </span>
+            <span className="bg-forest flex size-10 items-center justify-center rounded-[10px]">
+              <LogoMark tone="dark" className="size-8" />
+            </span>
+            <LogoMark className="size-8" />
+            <LogoMark className="size-5" />
           </div>
         </Section>
 

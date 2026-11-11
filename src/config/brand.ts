@@ -12,11 +12,6 @@ export const brand = {
   storagePrefix: "sofriva",
   /** Brauzer paneli rangi (Deep Forest). */
   themeColor: "#0F3D34",
-  /**
-   * Logotip varianti. Uchala variant /design sahifasida ko‘rsatiladi;
-   * egasi bittasini tanlagach, qolganlari o‘chiriladi.
-   */
-  logoVariant: "ring",
   colors: {
     forest: "#0F3D34",
     gold: "#D4AF7C",
@@ -29,9 +24,5 @@ export const brand = {
   slogan: string;
   storagePrefix: string;
   themeColor: string;
-  logoVariant: LogoVariant;
   colors: Record<string, string>;
 };
-
-export const logoVariants = ["ring", "dots", "sofra"] as const;
-export type LogoVariant = (typeof logoVariants)[number];

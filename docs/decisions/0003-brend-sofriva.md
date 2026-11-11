@@ -11,14 +11,18 @@ prompt'ni berdi. Nom va slogan hali huquqiy tekshiruvdan o‘tmagan.
 ## Qaror
 
 - Ishchi nom: **SOFRIVA**. Slogan: **"Every Table. Better Connected."** (master prompt'dan).
-- Nom, slogan, rang va logotip varianti bitta faylda: `src/config/brand.ts`. Nom o‘zgarsa,
+- Nom, slogan va ranglar bitta faylda: `src/config/brand.ts`. Nom o‘zgarsa,
   shu fayl va tarjima fayllaridagi `{brand}` atrofidagi matnlar tekshiriladi.
 - Til cookie'si: `sofriva_locale` (avval `onetable_locale`).
-- Logotip: noldan chizilgan S monogramma, 3 variant (`ring`, `dots`, `sofra`). S harfi ikki teng
-  yoydan quriladi (markazlar 32;23 va 32;41, radius 9). Egasi bittasini tanlaguncha `ring`
-  ishlatiladi; tanlovdan keyin qolgan ikkitasi o‘chiriladi.
-- Egasi yuborgan namunaviy rasmlardagi logotiplar, brend nomlari va raqamlar ishlatilmaydi
-  (masalan, "1M+ Happy Guests", "5K+ Restaurants" — haqiqiy ma’lumot emas).
+- Logotip: egasi buyurtma qilib chizdirgan S monogramma (egasi 2026-11-11 da tasdiqladi:
+  logotip uning buyurtmasi bilan chizilgan). Vektor shakli egasi yuborgan rasmdan avtomatik
+  chizib olindi (`src/components/shared/logo-path.ts`, `public/brand/*.svg`). Och fonda Deep Forest,
+  to‘q fonda Muted Gold rangda. Sprint 1'da noldan chizilgan 3 ta vaqtinchalik variant bekor qilindi.
+- Dizaynerdan asl vektor fayl (SVG, AI yoki PDF) olinganda `logo-path.ts` almashtiriladi: chop
+  etish va tovar belgisini ro‘yxatdan o‘tkazish uchun asl fayl kerak. Mualliflik huquqini
+  egasiga o‘tkazish haqidagi hujjatni dizaynerdan olish tavsiya etiladi.
+- Egasi ilhom uchun yuborgan boshqa rasmlardagi logotiplar, brend nomlari va raqamlar
+  ishlatilmaydi (masalan, "1M+ Happy Guests", "5K+ Restaurants" — haqiqiy ma’lumot emas).
 - Domen hali sotib olinmagan, kodda yozilmaydi.
 
 ## Oqibatlar
