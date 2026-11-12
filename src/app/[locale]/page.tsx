@@ -1,4 +1,6 @@
+import { Suspense } from "react";
 import { CalendarCheck, Store } from "lucide-react";
+import { AccountNav, AccountNavFallback } from "@/components/auth/account-nav";
 import { SiteFooter, SiteHeader, SkipLink } from "@/components/layout/site-shell";
 import { brand } from "@/config/brand";
 import { getDictionary, getLocale } from "@/lib/i18n/dictionaries";
@@ -20,7 +22,11 @@ export default async function HomePage() {
   return (
     <>
       <SkipLink label={dict.nav.skipToContent} />
-      <SiteHeader locale={locale} languageLabel={dict.nav.language} />
+      <SiteHeader locale={locale} languageLabel={dict.nav.language}>
+        <Suspense fallback={<AccountNavFallback />}>
+          <AccountNav locale={locale} labels={dict.account} />
+        </Suspense>
+      </SiteHeader>
 
       <main id="main" className="flex-1">
         <section

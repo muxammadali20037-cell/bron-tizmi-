@@ -98,5 +98,227 @@
     "errorDescription": "Try reloading the page. If the problem continues, try again a little later.",
     "emptyTitle": "Nothing here yet",
     "offline": "No internet connection. Try again once you are back online."
+  },
+  "account": {
+    "signIn": "Sign in",
+    "profile": "Profile",
+    "menu": "Account menu",
+    "restaurantPanel": "Restaurant panel",
+    "adminPanel": "Admin panel",
+    "signOut": "Sign out"
+  },
+  "login": {
+    "metaTitle": "Sign in",
+    "title": "Sign in",
+    "subtitle": "Enter your phone number and we’ll text you a 6-digit code. If you don’t have an account yet, one is created automatically.",
+    "sendCode": "Send code",
+    "codeTitle": "Enter the SMS code",
+    "codeSentTo": "We sent a 6-digit code to {phone}.",
+    "codeLabel": "SMS code",
+    "codeRequired": "Enter the 6 digits from the SMS",
+    "verify": "Confirm",
+    "resendIn": "You can resend the code in {seconds} s",
+    "resend": "Resend code",
+    "changePhone": "Change number",
+    "notConfigured": "Sign-in isn’t working right now. Please try again later."
+  },
+  "authErrors": {
+    "invalidPhone": "We can’t send a code to this number. Enter an Uzbekistan number, e.g. 90 123 45 67.",
+    "tooManySms": "Too many codes were requested for this number. Please try again later.",
+    "smsFailed": "The SMS couldn’t be sent. Please try again shortly.",
+    "codeInvalid": "The code is wrong or has expired. Check it or request a new one.",
+    "tooManyAttempts": "Too many attempts. Please try again in a few minutes.",
+    "unavailable": "SMS sign-in isn’t enabled yet. Please try again later.",
+    "generic": "Something went wrong. Please try again."
+  },
+  "onboarding": {
+    "metaTitle": "Complete your profile",
+    "title": "Let’s get acquainted",
+    "subtitle": "Restaurants see your name when you book, and so does your team.",
+    "nameLabel": "Full name",
+    "nameHint": "For example: Aziza Karimova",
+    "nameError": "Enter a name between 2 and 100 characters",
+    "languageLabel": "Interface language",
+    "consentBefore": "I agree to the processing of my personal data (name and phone number) as described in the ",
+    "consentLink": "privacy policy",
+    "consentAfter": ".",
+    "consentError": "We need your consent to continue",
+    "submit": "Continue"
+  },
+  "profile": {
+    "metaTitle": "Profile",
+    "title": "Profile",
+    "detailsTitle": "Personal details",
+    "phoneLabel": "Phone number",
+    "phoneNote": "Your number is used to sign in and can’t be changed here.",
+    "saved": "Changes saved",
+    "workplacesTitle": "My workplaces",
+    "workplacesEmpty": "You aren’t on any restaurant team yet.",
+    "invitations": {
+      "one": "You have {count} new invitation",
+      "few": "You have {count} new invitations",
+      "many": "You have {count} new invitations",
+      "other": "You have {count} new invitations"
+    },
+    "viewInvitations": "View invitations",
+    "openPanel": "Open panel",
+    "adminTitle": "Platform administration",
+    "adminDescription": "You are a SOFRIVA platform administrator.",
+    "signOutTitle": "Sign out",
+    "signOutDescription": "You’ll be signed out on this device."
+  },
+  "roles": {
+    "owner": "Owner",
+    "manager": "Manager",
+    "host": "Host",
+    "staff": "Staff"
+  },
+  "restaurantStatus": {
+    "draft": "Draft",
+    "pending_review": "In review",
+    "published": "Published",
+    "rejected": "Rejected",
+    "suspended": "Suspended"
+  },
+  "os": {
+    "metaTitle": "Restaurant panel",
+    "navLabel": "Restaurant menu",
+    "overview": "Overview",
+    "staff": "Team",
+    "allRestaurants": "All restaurants",
+    "chooseTitle": "My restaurants",
+    "chooseSubtitle": "Which restaurant panel should we open?",
+    "emptyTitle": "You aren’t on a restaurant team yet",
+    "emptyDescription": "When a restaurant owner or manager invites you by phone number, the invitation will appear here.",
+    "invitationsTitle": "Your invitations",
+    "invitationText": "{restaurant} invited you to join the team. Role: {role}.",
+    "invitationExpires": "Valid until {date}",
+    "accept": "Accept",
+    "decline": "Decline",
+    "accepted": "Invitation accepted",
+    "declined": "Invitation declined",
+    "yourRole": "Your role",
+    "status": "Status",
+    "open": "Open",
+    "overviewTitle": "Overview",
+    "branches": "Branches",
+    "halls": "Halls",
+    "tables": "Tables",
+    "teamMembers": "Active team members",
+    "notYet": "Not added yet",
+    "nextStepsTitle": "Coming next",
+    "nextSteps": "Managing restaurant details, halls, tables and reservations will be added to this panel in the next stages."
+  },
+  "staff": {
+    "metaTitle": "Team",
+    "title": "Team",
+    "membersTitle": "Team members",
+    "name": "Name",
+    "phone": "Phone",
+    "role": "Role",
+    "status": "Status",
+    "actions": "Actions",
+    "active": "Active",
+    "inactive": "Deactivated",
+    "you": "you",
+    "noName": "No name yet",
+    "deactivate": "Deactivate",
+    "activate": "Reactivate",
+    "roleLabel": "Role of {name}",
+    "roleChanged": "Role changed",
+    "deactivated": "Team member deactivated",
+    "activated": "Team member reactivated",
+    "deactivateTitle": "Deactivate {name}?",
+    "deactivateText": "They won’t be able to open this restaurant’s panel. You can reactivate them later.",
+    "inviteTitle": "Invite a team member",
+    "inviteDescription": "The invitation is valid for 7 days. Let them know yourself: when they sign in to SOFRIVA with this number, they’ll see the invitation and can accept it.",
+    "inviteRole": "Role",
+    "invite": "Create invitation",
+    "invited": "Invitation created",
+    "pendingTitle": "Pending invitations",
+    "pendingEmpty": "No pending invitations",
+    "revoke": "Revoke",
+    "revoked": "Invitation revoked",
+    "expires": "until {date}",
+    "readOnly": "Only the restaurant owner can change roles. You can invite and deactivate hosts and staff.",
+    "roleHelp": {
+      "manager": "Manager: restaurant settings, halls, reservations, hosts and staff.",
+      "host": "Host: takes reservations and seats guests.",
+      "staff": "Staff: sees today’s reservations and tables."
+    }
+  },
+  "appErrors": {
+    "not_authenticated": "Please sign in first.",
+    "forbidden": "You don’t have permission to do this.",
+    "invalid_name": "Enter a name between 2 and 100 characters.",
+    "invalid_locale": "Choose a language.",
+    "invalid_phone": "Invalid number. Enter 9 digits, e.g. 90 123 45 67.",
+    "already_member": "The owner of this number is already on the team.",
+    "already_invited": "An invitation for this number already exists.",
+    "invitation_not_found": "Invitation not found.",
+    "invitation_not_pending": "This invitation is already closed.",
+    "invitation_expired": "The invitation has expired. Ask the restaurant for a new one.",
+    "restaurant_suspended": "The restaurant is temporarily suspended.",
+    "cannot_change_self": "You can’t change your own role or status.",
+    "member_not_found": "Team member not found.",
+    "last_owner": "The restaurant must keep at least one active owner.",
+    "generic": "Something went wrong. Please try again."
+  },
+  "forbidden": {
+    "title": "You don’t have access to this page",
+    "description": "This page belongs to a restaurant whose team you aren’t on, or your role doesn’t allow it. If you think this is a mistake, contact the restaurant owner.",
+    "back": "Back to profile"
+  },
+  "admin": {
+    "metaTitle": "Admin panel",
+    "navLabel": "Admin menu",
+    "overview": "Overview",
+    "title": "Platform metrics",
+    "users": "Users",
+    "restaurants": "Restaurants",
+    "upcomingReservations": "Upcoming active reservations",
+    "mediaPending": "Photos and videos awaiting review",
+    "restaurantsByStatus": "Restaurants by status",
+    "empty": "No restaurants yet",
+    "none": "None yet"
+  },
+  "legal": {
+    "privacyMetaTitle": "Privacy policy",
+    "privacyTitle": "Privacy policy",
+    "draftNotice": "This is a preliminary version. Before the service launches, a lawyer will review it and the operator’s (company’s) details will be added.",
+    "sections": [
+      {
+        "title": "What we collect",
+        "items": [
+          "Your phone number — to sign you in and notify you about reservations.",
+          "Your name and interface language — you enter them yourself.",
+          "Restaurant team membership and role — if a restaurant invited you.",
+          "Your reservations: restaurant, date, time, party size and your note (once booking is live)."
+        ]
+      },
+      {
+        "title": "Who sees it",
+        "items": [
+          "A restaurant sees your name and number only for reservations made with that restaurant.",
+          "A restaurant’s owner and manager see the names and numbers of their own team members.",
+          "To send the SMS code, your number is passed to the SMS provider (Eskiz, Uzbekistan)."
+        ]
+      },
+      {
+        "title": "Where and how long it’s stored",
+        "items": [
+          "Data is stored on Supabase servers in Frankfurt (Germany) and sent over encrypted connections.",
+          "It is kept until your account is deleted.",
+          "To enforce SMS limits, a one-way fingerprint (hash) of your number is kept for 2 days."
+        ]
+      },
+      {
+        "title": "Your rights",
+        "items": [
+          "You can change your name and language in your profile at any time.",
+          "You can ask to see or correct your data, or to delete your account. A contact for such requests will be added here before launch."
+        ]
+      }
+    ]
   }
 }

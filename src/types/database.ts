@@ -1184,7 +1184,67 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      accept_staff_invitation: {
+        Args: { p_invitation_id: string }
+        Returns: string
+      }
+      admin_overview: { Args: never; Returns: Json }
+      complete_onboarding: {
+        Args: { p_full_name: string; p_locale: string }
+        Returns: undefined
+      }
+      decline_staff_invitation: {
+        Args: { p_invitation_id: string }
+        Returns: undefined
+      }
+      get_my_access: { Args: never; Returns: Json }
+      get_restaurant_staff: {
+        Args: { p_restaurant_id: string }
+        Returns: {
+          full_name: string
+          is_active: boolean
+          joined_at: string
+          phone: string
+          role: Database["public"]["Enums"]["staff_role"]
+          user_id: string
+        }[]
+      }
+      invite_staff: {
+        Args: {
+          p_phone: string
+          p_restaurant_id: string
+          p_role: Database["public"]["Enums"]["staff_role"]
+        }
+        Returns: string
+      }
+      my_staff_invitations: {
+        Args: never
+        Returns: {
+          created_at: string
+          expires_at: string
+          id: string
+          restaurant_id: string
+          restaurant_name: Json
+          role: Database["public"]["Enums"]["staff_role"]
+        }[]
+      }
+      register_sms_attempt: { Args: { p_phone: string }; Returns: Json }
+      revoke_staff_invitation: {
+        Args: { p_invitation_id: string }
+        Returns: undefined
+      }
+      set_staff_member_active: {
+        Args: { p_active: boolean; p_restaurant_id: string; p_user_id: string }
+        Returns: undefined
+      }
+      set_staff_member_role: {
+        Args: {
+          p_restaurant_id: string
+          p_role: Database["public"]["Enums"]["staff_role"]
+          p_user_id: string
+        }
+        Returns: undefined
+      }
     }
     Enums: {
       allocation_kind: "reservation" | "block"
@@ -1197,7 +1257,12 @@ export type Database = {
         | "banquet"
         | "private"
         | "kids"
-      invitation_status: "pending" | "accepted" | "revoked" | "expired"
+      invitation_status:
+        | "pending"
+        | "accepted"
+        | "revoked"
+        | "expired"
+        | "declined"
       media_kind: "photo" | "video"
       media_status: "pending_review" | "approved" | "rejected"
       notification_channel: "telegram" | "in_app"
@@ -1377,7 +1442,7 @@ export const Constants = {
         "private",
         "kids",
       ],
-      invitation_status: ["pending", "accepted", "revoked", "expired"],
+      invitation_status: ["pending", "accepted", "revoked", "expired", "declined"],
       media_kind: ["photo", "video"],
       media_status: ["pending_review", "approved", "rejected"],
       notification_channel: ["telegram", "in_app"],

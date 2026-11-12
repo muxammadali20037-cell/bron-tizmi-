@@ -23,3 +23,15 @@ export function plural(locale: Locale, count: number, forms: PluralForms): strin
     : forms.other;
   return interpolate(template, { count });
 }
+
+const INTL_LOCALE: Record<Locale, string> = { uz: "uz-Latn-UZ", ru: "ru-RU", en: "en-GB" };
+
+/** Sana Toshkent vaqti bo‘yicha: "12-noy, 2026" / "12 нояб. 2026 г." / "12 Nov 2026". */
+export function formatDate(value: string | Date, locale: Locale): string {
+  const date = typeof value === "string" ? new Date(value) : value;
+  if (Number.isNaN(date.getTime())) return "";
+  return new Intl.DateTimeFormat(INTL_LOCALE[locale], {
+    dateStyle: "medium",
+    timeZone: "Asia/Tashkent",
+  }).format(date);
+}

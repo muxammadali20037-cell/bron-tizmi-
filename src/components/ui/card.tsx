@@ -16,8 +16,13 @@ export function CardHeader({ className, ...props }: React.ComponentProps<"div">)
   );
 }
 
-export function CardTitle({ className, ...props }: React.ComponentProps<"h3">) {
-  return <h3 className={cn("text-base leading-snug font-semibold", className)} {...props} />;
+/** Karta sarlavhasi. Sahifadagi sarlavhalar ketma-ketligi buzilmasligi uchun darajasini tanlash mumkin. */
+export function CardTitle({
+  className,
+  as: Heading = "h3",
+  ...props
+}: React.ComponentProps<"h3"> & { as?: "h2" | "h3" | "h4" }) {
+  return <Heading className={cn("text-base leading-snug font-semibold", className)} {...props} />;
 }
 
 export function CardDescription({ className, ...props }: React.ComponentProps<"p">) {
