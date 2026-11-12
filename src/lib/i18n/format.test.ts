@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { interpolate, plural, type PluralForms } from "./format";
+import { formatDate, interpolate, plural, type PluralForms } from "./format";
 
 describe("interpolate", () => {
   it("qiymatlarni joylaydi", () => {
@@ -56,5 +56,19 @@ describe("plural", () => {
   it("uz", () => {
     expect(plural("uz", 1, uz)).toBe("1 kishi");
     expect(plural("uz", 6, uz)).toBe("6 kishi");
+  });
+});
+
+describe("formatDate", () => {
+  it("Toshkent vaqti bo‘yicha sanani yozadi", () => {
+    // 2026-11-11 21:30 UTC = 2026-11-12 02:30 Toshkent
+    const value = "2026-11-11T21:30:00Z";
+    expect(formatDate(value, "en")).toContain("12");
+    expect(formatDate(value, "en")).toContain("2026");
+    expect(formatDate(value, "ru")).toContain("12");
+  });
+
+  it("noto‘g‘ri qiymatda bo‘sh satr", () => {
+    expect(formatDate("emas", "uz")).toBe("");
   });
 });

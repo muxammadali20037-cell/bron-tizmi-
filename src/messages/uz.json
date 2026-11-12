@@ -98,5 +98,227 @@
     "errorDescription": "Sahifani qayta yuklab ko‘ring. Muammo takrorlansa, birozdan keyin urinib ko‘ring.",
     "emptyTitle": "Hozircha hech narsa yo‘q",
     "offline": "Internet aloqasi yo‘q. Ulanish tiklangach qayta urinib ko‘ring."
+  },
+  "account": {
+    "signIn": "Kirish",
+    "profile": "Profil",
+    "menu": "Hisob menyusi",
+    "restaurantPanel": "Restoran paneli",
+    "adminPanel": "Admin panel",
+    "signOut": "Chiqish"
+  },
+  "login": {
+    "metaTitle": "Kirish",
+    "title": "Kirish",
+    "subtitle": "Telefon raqamingizni kiriting. SMS orqali 6 xonali kod yuboramiz. Hisobingiz bo‘lmasa, avtomatik ochiladi.",
+    "sendCode": "Kod yuborish",
+    "codeTitle": "SMS kodni kiriting",
+    "codeSentTo": "{phone} raqamiga 6 xonali kod yuborildi.",
+    "codeLabel": "SMS kod",
+    "codeRequired": "SMS’dagi 6 ta raqamni kiriting",
+    "verify": "Tasdiqlash",
+    "resendIn": "Kodni qayta yuborish {seconds} soniyadan keyin mumkin",
+    "resend": "Kodni qayta yuborish",
+    "changePhone": "Raqamni o‘zgartirish",
+    "notConfigured": "Kirish hozircha ishlamayapti. Birozdan keyin urinib ko‘ring."
+  },
+  "authErrors": {
+    "invalidPhone": "Bu raqamga kod yuborib bo‘lmaydi. O‘zbekiston raqamini kiriting, masalan 90 123 45 67.",
+    "tooManySms": "Bu raqamga juda ko‘p kod so‘raldi. Birozdan keyin qayta urinib ko‘ring.",
+    "smsFailed": "SMS yuborilmadi. Birozdan keyin qayta urinib ko‘ring.",
+    "codeInvalid": "Kod noto‘g‘ri yoki muddati o‘tgan. Tekshirib qayta kiriting yoki yangi kod so‘rang.",
+    "tooManyAttempts": "Juda ko‘p urinish bo‘ldi. Bir necha daqiqadan keyin qayta urinib ko‘ring.",
+    "unavailable": "SMS orqali kirish hozircha yoqilmagan. Birozdan keyin urinib ko‘ring.",
+    "generic": "Nimadir xato ketdi. Qayta urinib ko‘ring."
+  },
+  "onboarding": {
+    "metaTitle": "Profilni to‘ldirish",
+    "title": "Tanishib olaylik",
+    "subtitle": "Ismingiz bron qilganingizda restoranga va jamoangizga ko‘rinadi.",
+    "nameLabel": "Ism va familiya",
+    "nameHint": "Masalan: Aziza Karimova",
+    "nameError": "Ismni 2 tadan 100 tagacha belgida yozing",
+    "languageLabel": "Interfeys tili",
+    "consentBefore": "Shaxsiy ma’lumotlarim (ism va telefon raqamim) ",
+    "consentLink": "maxfiylik siyosati",
+    "consentAfter": "da yozilganidek qayta ishlanishiga roziman.",
+    "consentError": "Davom etish uchun roziligingiz kerak",
+    "submit": "Davom etish"
+  },
+  "profile": {
+    "metaTitle": "Profil",
+    "title": "Profil",
+    "detailsTitle": "Shaxsiy ma’lumotlar",
+    "phoneLabel": "Telefon raqami",
+    "phoneNote": "Raqam kirish uchun ishlatiladi va bu yerda o‘zgartirilmaydi.",
+    "saved": "O‘zgarishlar saqlandi",
+    "workplacesTitle": "Ish joylarim",
+    "workplacesEmpty": "Siz hali hech qaysi restoran jamoasida emassiz.",
+    "invitations": {
+      "one": "{count} ta yangi taklif bor",
+      "few": "{count} ta yangi taklif bor",
+      "many": "{count} ta yangi taklif bor",
+      "other": "{count} ta yangi taklif bor"
+    },
+    "viewInvitations": "Takliflarni ko‘rish",
+    "openPanel": "Panelni ochish",
+    "adminTitle": "Platforma boshqaruvi",
+    "adminDescription": "Siz SOFRIVA platformasi administratorisiz.",
+    "signOutTitle": "Hisobdan chiqish",
+    "signOutDescription": "Bu qurilmada hisobingizdan chiqasiz."
+  },
+  "roles": {
+    "owner": "Egasi",
+    "manager": "Menejer",
+    "host": "Administrator",
+    "staff": "Xodim"
+  },
+  "restaurantStatus": {
+    "draft": "Qoralama",
+    "pending_review": "Tekshiruvda",
+    "published": "Nashr qilingan",
+    "rejected": "Rad etilgan",
+    "suspended": "To‘xtatilgan"
+  },
+  "os": {
+    "metaTitle": "Restoran paneli",
+    "navLabel": "Restoran menyusi",
+    "overview": "Umumiy",
+    "staff": "Jamoa",
+    "allRestaurants": "Barcha restoranlar",
+    "chooseTitle": "Restoranlarim",
+    "chooseSubtitle": "Qaysi restoran panelini ochamiz?",
+    "emptyTitle": "Siz hali birorta restoran jamoasida emassiz",
+    "emptyDescription": "Restoran egasi yoki menejeri sizni telefon raqamingiz orqali taklif qilsa, taklif shu yerda paydo bo‘ladi.",
+    "invitationsTitle": "Sizga kelgan takliflar",
+    "invitationText": "{restaurant} sizni jamoaga taklif qildi. Rol: {role}.",
+    "invitationExpires": "{date} gacha amal qiladi",
+    "accept": "Qabul qilish",
+    "decline": "Rad etish",
+    "accepted": "Taklif qabul qilindi",
+    "declined": "Taklif rad etildi",
+    "yourRole": "Sizning rolingiz",
+    "status": "Holati",
+    "open": "Ochish",
+    "overviewTitle": "Umumiy ko‘rinish",
+    "branches": "Filiallar",
+    "halls": "Zallar",
+    "tables": "Stollar",
+    "teamMembers": "Faol jamoa a’zolari",
+    "notYet": "Hali qo‘shilmagan",
+    "nextStepsTitle": "Keyingi bosqichlar",
+    "nextSteps": "Restoran ma’lumotlari, zallar, stollar va bronlarni boshqarish keyingi bosqichlarda shu panelga qo‘shiladi."
+  },
+  "staff": {
+    "metaTitle": "Jamoa",
+    "title": "Jamoa",
+    "membersTitle": "Jamoa a’zolari",
+    "name": "Ism",
+    "phone": "Telefon",
+    "role": "Rol",
+    "status": "Holat",
+    "actions": "Amallar",
+    "active": "Faol",
+    "inactive": "O‘chirilgan",
+    "you": "siz",
+    "noName": "Ism kiritilmagan",
+    "deactivate": "O‘chirish",
+    "activate": "Qayta yoqish",
+    "roleLabel": "{name} roli",
+    "roleChanged": "Rol o‘zgartirildi",
+    "deactivated": "Xodim o‘chirildi",
+    "activated": "Xodim qayta yoqildi",
+    "deactivateTitle": "{name} o‘chirilsinmi?",
+    "deactivateText": "U bu restoran paneliga kira olmaydi. Keyinroq qayta yoqishingiz mumkin.",
+    "inviteTitle": "Xodim taklif qilish",
+    "inviteDescription": "Taklif 7 kun amal qiladi. Xodimga o‘zingiz xabar bering: u SOFRIVA’ga shu raqam bilan kirsa, taklifni ko‘radi va qabul qiladi.",
+    "inviteRole": "Rol",
+    "invite": "Taklif yaratish",
+    "invited": "Taklif yaratildi",
+    "pendingTitle": "Kutilayotgan takliflar",
+    "pendingEmpty": "Kutilayotgan taklif yo‘q",
+    "revoke": "Bekor qilish",
+    "revoked": "Taklif bekor qilindi",
+    "expires": "{date} gacha",
+    "readOnly": "Rollarni faqat restoran egasi o‘zgartiradi. Siz host va xodimlarni taklif qilishingiz va o‘chirishingiz mumkin.",
+    "roleHelp": {
+      "manager": "Menejer: restoran sozlamalari, zallar, bronlar va host/xodimlarni boshqaradi.",
+      "host": "Administrator: bronlarni qabul qiladi, mehmonlarni joylashtiradi.",
+      "staff": "Xodim: bugungi bronlar va stollarni ko‘radi."
+    }
+  },
+  "appErrors": {
+    "not_authenticated": "Avval tizimga kiring.",
+    "forbidden": "Bu amal uchun ruxsatingiz yo‘q.",
+    "invalid_name": "Ismni 2 tadan 100 tagacha belgida yozing.",
+    "invalid_locale": "Tilni tanlang.",
+    "invalid_phone": "Telefon raqami noto‘g‘ri. 9 ta raqam kiriting, masalan 90 123 45 67.",
+    "already_member": "Bu raqam egasi allaqachon jamoada.",
+    "already_invited": "Bu raqamga taklif allaqachon yaratilgan.",
+    "invitation_not_found": "Taklif topilmadi.",
+    "invitation_not_pending": "Bu taklif allaqachon yopilgan.",
+    "invitation_expired": "Taklif muddati o‘tgan. Restorandan yangi taklif so‘rang.",
+    "restaurant_suspended": "Restoran vaqtincha to‘xtatilgan.",
+    "cannot_change_self": "O‘zingizning rolingiz yoki holatingizni o‘zgartira olmaysiz.",
+    "member_not_found": "Xodim topilmadi.",
+    "last_owner": "Restoranda kamida bitta faol egasi qolishi kerak.",
+    "generic": "Nimadir xato ketdi. Qayta urinib ko‘ring."
+  },
+  "forbidden": {
+    "title": "Bu sahifaga ruxsatingiz yo‘q",
+    "description": "Sahifa siz a’zo bo‘lmagan restoranga tegishli yoki rolingiz yetarli emas. Xato deb o‘ylasangiz, restoran egasiga murojaat qiling.",
+    "back": "Profilga qaytish"
+  },
+  "admin": {
+    "metaTitle": "Admin panel",
+    "navLabel": "Admin menyusi",
+    "overview": "Umumiy",
+    "title": "Platforma ko‘rsatkichlari",
+    "users": "Foydalanuvchilar",
+    "restaurants": "Restoranlar",
+    "upcomingReservations": "Kelgusi faol bronlar",
+    "mediaPending": "Tekshiruv kutayotgan rasm va videolar",
+    "restaurantsByStatus": "Restoranlar holati bo‘yicha",
+    "empty": "Hali restoran yo‘q",
+    "none": "Hali yo‘q"
+  },
+  "legal": {
+    "privacyMetaTitle": "Maxfiylik siyosati",
+    "privacyTitle": "Maxfiylik siyosati",
+    "draftNotice": "Bu matnning dastlabki versiyasi. Xizmat ishga tushishidan oldin huquqshunos tekshiradi va operator (kompaniya) rekvizitlari qo‘shiladi.",
+    "sections": [
+      {
+        "title": "Qanday ma’lumot yig‘amiz",
+        "items": [
+          "Telefon raqamingiz — tizimga kirish va bron haqida xabar berish uchun.",
+          "Ismingiz va interfeys tili — siz o‘zingiz kiritasiz.",
+          "Restoran jamoasi a’zoligi va rolingiz — agar restoran sizni taklif qilgan bo‘lsa.",
+          "Bronlaringiz: restoran, sana, vaqt, mehmonlar soni va izohingiz (bron qilish ishga tushganda)."
+        ]
+      },
+      {
+        "title": "Kim ko‘radi",
+        "items": [
+          "Restoran faqat o‘ziga qilingan bronlaringiz bo‘yicha ism va telefon raqamingizni ko‘radi.",
+          "Restoran egasi va menejeri o‘z jamoasi a’zolarining ismi va raqamini ko‘radi.",
+          "SMS kod yuborish uchun telefon raqamingiz SMS xizmati provayderiga (Eskiz, O‘zbekiston) beriladi."
+        ]
+      },
+      {
+        "title": "Qayerda va qancha saqlanadi",
+        "items": [
+          "Ma’lumotlar Supabase xizmatining Frankfurt (Germaniya) shahridagi serverlarida shifrlangan aloqa orqali saqlanadi.",
+          "Hisobingiz o‘chirilmaguncha saqlanadi.",
+          "SMS limitini hisoblash uchun telefon raqamingizning qaytarib bo‘lmaydigan izi (hash) 2 kun saqlanadi."
+        ]
+      },
+      {
+        "title": "Huquqlaringiz",
+        "items": [
+          "Profil sahifasida ismingiz va tilingizni istalgan vaqtda o‘zgartirishingiz mumkin.",
+          "Ma’lumotlaringizni ko‘rish, tuzatish yoki hisobingizni o‘chirishni so‘rashingiz mumkin. Murojaat uchun aloqa manzili xizmat ishga tushishidan oldin shu yerga qo‘shiladi."
+        ]
+      }
+    ]
   }
 }
